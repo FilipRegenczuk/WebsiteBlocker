@@ -2,7 +2,7 @@ import time
 from datetime import datetime as dt
 
 hosts_path = r"C:\Windows\System32\drivers\etc\hosts"
-hosts_temp_path ="hosts.txt"
+hosts_temp_path =r"C:\Users\frege\OneDrive\Documents\Python\WebsiteBlocker\hosts"
 redirect_address = "127.0.0.1"
 blocked_websites = ["www.youtube.com", "youtube.com"]
 
