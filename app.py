@@ -9,7 +9,7 @@ blocked_websites = ["www.youtube.com", "youtube.com"]
 while True:
     if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 16):
         print("Working")
-        with open(hosts_temp_path, 'r+') as file:
+        with open(hosts_path, 'r+') as file:
             content = file.read()
             for website in blocked_websites:
                 if website in content:
@@ -19,5 +19,12 @@ while True:
 
     else:
         print("Free time")
-    
-    time.sleep(2)
+        with open(hosts_path, 'r+') as file:
+            content = file.readlines()          # create a list of strings
+            file.seek(0)                        # return pointer to first line
+            for line in content:
+                if not any(website in line for website in blocked_websites):
+                    file.write(line)
+            file.truncate()         # delete previous version
+
+    time.sleep(86400)   # 24h
