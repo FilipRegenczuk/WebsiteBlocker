@@ -27,4 +27,4 @@ while True:
                     file.write(line)
             file.truncate()         # delete previous version
 
-    time.sleep(86400)   # 24h
+    time.sleep(5)   # refresh every 5 seconds
