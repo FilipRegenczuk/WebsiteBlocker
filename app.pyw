@@ -2,7 +2,7 @@ import time
 from datetime import datetime as dt
 
 hosts_path = r"C:\Windows\System32\drivers\etc\hosts"
-hosts_temp_path =r"C:\Users\frege\OneDrive\Documents\Python\WebsiteBlocker\hosts"
+hosts_temp_path =r"C:\Users\frege\OneDrive\Documents\Python\WebsiteBlocker\hosts"   # used for testing
 redirect_address = "127.0.0.1"
 blocked_websites = ["www.youtube.com", "youtube.com"]
 
@@ -27,4 +27,4 @@ while True:
                     file.write(line)
             file.truncate()         # delete previous version
 
-    time.sleep(5)   # refresh every 5 seconds
+    time.sleep(5)       # refresh every 5 seconds
